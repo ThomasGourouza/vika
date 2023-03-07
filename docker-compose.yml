@@ -1,0 +1,37 @@
+version: '3.3'
+
+services:
+  php:
+    build: ./
+    container_name: php-app
+    depends_on:
+    - db
+    image: php:7.3-apache
+    volumes:
+    - ./src:/var/www/html/
+    ports:
+    - 8090:80
+  db:
+    container_name: mysql-db
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: vikadb
+      MYSQL_USER: vika
+      MYSQL_PASSWORD: password
+    ports:
+    - 3306:3306
+    volumes:
+    - ./data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: db
+      PMA_USER: vika
+      PMA_PASSWORD: password
+      UPLOAD_LIMIT: 20M
+    ports:
+    - 8091:80
