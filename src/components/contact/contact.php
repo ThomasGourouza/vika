@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="components/contact/contact.css">
 
-<h1>Contact</h1>
+<h1><?php echo $translations['contact'] ?></h1>
 
 <div class="row">
     <div class="column contact-container">
