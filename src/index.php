@@ -4,9 +4,9 @@
 $page = ($_REQUEST
     && $_REQUEST["page"]
     && in_array($_REQUEST["page"], [
-        "accueil",
+        "welcome",
         "contact"
-    ])) ? $_REQUEST["page"] : "accueil";
+    ])) ? $_REQUEST["page"] : "welcome";
 
 $title = "Site de Vika";
 ?>
@@ -36,7 +36,7 @@ $title = "Site de Vika";
     </header>
     <main>
         <article>
-            <?php include "components/" . $page . "/" . $page . ".php"; ?>
+        <?php include "components/" . $page . "/" . $page . ".php"; ?>
         </article>
     </main>
     <footer>

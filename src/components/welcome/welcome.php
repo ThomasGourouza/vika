@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="components/accueil/accueil.css">
+<link rel="stylesheet" href="components/welcome/welcome.css">
 <h1>
     Bienvenue sur le site de Vika!
 </h1>

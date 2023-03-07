@@ -2,11 +2,11 @@
 
 <?php $activeLink = 'class="active-link"'; ?>
 
-<div class="logo" onclick="window.location.href='index.php?page=accueil'"></div>
+<div class="logo" onclick="window.location.href='index.php?page=welcome'"></div>
 <nav>
 	<a
-		href="index.php?page=accueil"
-		<?php if ($page=="accueil") { echo $activeLink; } ?>
+		href="index.php?page=welcome"
+		<?php if ($page=="welcome") { echo $activeLink; } ?>
 	>
 		Accueil
 	</a>
