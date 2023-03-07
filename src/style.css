@@ -14,7 +14,7 @@ main {
 	bottom: 25px;
 	left: 0;
 	right: 0;
-	background-color: gray;
+	background-color: rgb(151, 196, 255);
 	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: hidden;
