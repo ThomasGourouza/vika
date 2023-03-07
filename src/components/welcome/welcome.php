@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="components/welcome/welcome.css">
 <h1>
-    Bienvenue sur le site de Vika!
+    <?php echo $translations['title'] ?>
 </h1>
 
 <div class="container">
@@ -17,10 +17,10 @@
                         <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>id</th>
-                                <th>name</th>
-                                <th>age</th>
-                                <th>country</th>
+                                <th>' . $translations['id'] . '</th>
+                                <th>' . $translations['name'] . '</th>
+                                <th>' . $translations['age'] . '</th>
+                                <th>' . $translations['country'] . '</th>
                             </tr>
                         </thead>
                         <tbody>

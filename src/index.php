@@ -1,15 +1,24 @@
 <?php include_once './mysql-connection.php' ?>
 
 <?php
-$page = ($_REQUEST
-    && $_REQUEST["page"]
-    && in_array($_REQUEST["page"], [
-        "welcome",
-        "contact"
-    ])) ? $_REQUEST["page"] : "welcome";
+$availablePages = ["welcome", "contact"];
+$page = ($_REQUEST["page"]
+    && in_array($_REQUEST["page"], $availablePages))
+    ? $_REQUEST["page"] : "welcome";
 
 $title = "Site de Vika";
-$lang = "fr";
+
+$availableLangs = ["fr", "en", "ru"];
+$requestLang = $_REQUEST["lang"];
+$browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$defaultLang = in_array($browserLang, $availableLangs)
+    ? $browserLang : "en";
+
+$lang = in_array($requestLang, $availableLangs)
+    ? $requestLang : $defaultLang;
+
+require_once "./i18n/" . $lang . ".php";
+
 ?>
 
 <html>

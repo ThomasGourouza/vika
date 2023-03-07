@@ -2,28 +2,30 @@
 
 <?php $activeLink = 'class="active-link"'; ?>
 
-<div class="logo" onclick="window.location.href='index.php?page=welcome'"></div>
+<div class="logo" onclick="window.location.href='index.php?page=welcome&lang=<?php echo $lang ?>'"></div>
 <nav>
 	<a
-		href="index.php?page=welcome"
+		href="index.php?page=welcome&lang=<?php echo $lang ?>"
 		<?php if ($page=="welcome") { echo $activeLink; } ?>
 	>
-		Accueil
+		<?php echo $translations['welcome'] ?>
 	</a>
 	<a
-		href="index.php?page=contact"
+		href="index.php?page=contact&lang=<?php echo $lang ?>"
 		<?php if ($page=="contact") { echo $activeLink; } ?>
 	>
-		Contact
+		<?php echo $translations['contact'] ?>
 	</a>
-	<form action="components/header/lang-select.php" method="GET">
-		<label for="lang">Choose a language:</label>
+	<form action="components/header/lang-select.php" method="POST">
+		<label for="lang"><?php echo $translations['lang_select'] ?>:</label>
 		
-		<select name="lang" id="lang">
-		  <option value="fr">Français</option>
-		  <option value="en">English</option>
-		  <option value="ru">Russian</option>
-		</select> 
-		<button type="submit" class="btn btn-primary" name="submit">Go</button>
+		<select name="lang" id="lang" onchange="this.form.submit()">
+			<option value="fr" <?php echo ($lang=="fr") ? "selected" : ""; ?> >Français</option>
+			<option value="en" <?php echo ($lang=="en") ? "selected" : ""; ?> >English</option>
+			<option value="ru" <?php echo ($lang=="ru") ? "selected" : ""; ?> >Русский</option>
+		</select>
+
+		<input type="text" value="<?php echo $page ?>" name="page" hidden>
+
 	</form>
 </nav>
