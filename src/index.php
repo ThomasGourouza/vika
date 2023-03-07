@@ -9,6 +9,7 @@ $page = ($_REQUEST
     ])) ? $_REQUEST["page"] : "welcome";
 
 $title = "Site de Vika";
+$lang = "fr";
 ?>
 
 <html>
