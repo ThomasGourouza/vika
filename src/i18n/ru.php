@@ -1,5 +1,6 @@
 <?php
     $translations = array(
+        "site_title" => "Сайт Вики",
         "title" => "Добро пожаловать на сайт Вики!",
         "welcome" => "Добро пожаловать",
         "contact" => "Контакт",

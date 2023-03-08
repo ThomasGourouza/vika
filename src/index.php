@@ -6,8 +6,6 @@ $page = ($_REQUEST["page"]
     && in_array($_REQUEST["page"], $availablePages))
     ? $_REQUEST["page"] : "welcome";
 
-$title = "Site de Vika";
-
 $availableLangs = ["fr", "en", "ru"];
 $requestLang = $_REQUEST["lang"];
 $browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
@@ -24,7 +22,7 @@ require_once "./i18n/" . $lang . ".php";
 <html>
 <head>
     <meta charset="utf-8">
-    <title><?php echo $title; ?></title>
+    <title><?php echo $translations['site_title'] ?></title>
     <link rel="icon" href="./favicon.ico">
     <link href="./style.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
@@ -37,8 +35,6 @@ require_once "./i18n/" . $lang . ".php";
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
             crossorigin="anonymous"
     ></script>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <body>
     <header>

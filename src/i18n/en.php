@@ -1,5 +1,6 @@
 <?php
     $translations = array(
+        "site_title" => "Vika's website",
         "title" => "Welcome on Vika's website!",
         "welcome" => "Welcome",
         "contact" => "Contact",
