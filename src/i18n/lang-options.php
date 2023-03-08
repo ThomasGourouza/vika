@@ -22,10 +22,6 @@ $deOption = new LangOption();
 $deOption->code = 'de';
 $deOption->name = 'Deutsch';
 
-$deOption = new LangOption();
-$deOption->code = 'es';
-$deOption->name = 'Espanol';
-
 $langOptions = array($frOption, $enOption, $ruOption, $deOption);
 
 $availableLangs = [];
