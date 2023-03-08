@@ -1,5 +1,5 @@
-<?php include_once './mysql-connection.php' ?>
-<?php include_once './lang-options.php' ?>
+<?php include_once './imports/mysql-connection.php' ?>
+<?php include_once './imports/lang-options.php' ?>
 
 <?php
 $availablePages = ["welcome", "contact"];
