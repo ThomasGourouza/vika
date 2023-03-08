@@ -1,4 +1,6 @@
+<?php include_once './models/person.php' ?>
 <link rel="stylesheet" href="components/welcome/welcome.css">
+
 <h1>
     <?php echo $translations['title'] ?>
 </h1>
@@ -22,8 +24,19 @@
         echo '</tr></thead>';
         echo '<tbody>';
         while ($value = $result->fetch_assoc()) {
+            // console_log($value);
             echo '<tr>';
             foreach ($value as $element) {
+                
+                console_log($element);
+                // $person = new Person();
+                // $person->id = 'fr';
+                // $person->name = 'Français';
+                // $person->age = 'Français';
+                // $person->country = 'Français';
+
+                // $persons = array($person);
+
                 echo '<td>' . $element . '</td>';
             }
             echo '</tr>';
