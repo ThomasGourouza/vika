@@ -9,22 +9,18 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM `Person` WHERE 1;";
+    $sql = "SELECT * FROM `Person`;";
     $result = $conn->query($sql);
+    $columns = ['id', 'name', 'age', 'country'];
 
     if ($result->num_rows > 0) {
-        echo '
-                        <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>' . $translations['id'] . '</th>
-                                <th>' . $translations['name'] . '</th>
-                                <th>' . $translations['age'] . '</th>
-                                <th>' . $translations['country'] . '</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        ';
+        echo '<table class="table table-striped">';
+        echo '<thead><tr>';
+        foreach ($columns as $column) {
+            echo '<th>' . $translations[$column] . '</th>';
+        }
+        echo '</tr></thead>';
+        echo '<tbody>';
         while ($value = $result->fetch_assoc()) {
             echo '<tr>';
             foreach ($value as $element) {
@@ -32,7 +28,8 @@
             }
             echo '</tr>';
         }
-        echo '</tbody></table>';
+        echo '</tbody>';
+        echo '</table>';
         $result->close();
     } else {
         echo "0 results";
