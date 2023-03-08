@@ -1,7 +1,6 @@
 <?php
 
-class LangOption
-{
+class LangOption {
     public $code;
     public $name;
 }
