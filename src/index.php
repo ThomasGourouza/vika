@@ -1,4 +1,5 @@
 <?php include_once './mysql-connection.php' ?>
+<?php include_once './lang-options.php' ?>
 
 <?php
 $availablePages = ["welcome", "contact"];
@@ -6,7 +7,6 @@ $page = ($_REQUEST["page"]
     && in_array($_REQUEST["page"], $availablePages))
     ? $_REQUEST["page"] : "welcome";
 
-$availableLangs = ["fr", "en", "ru"];
 $requestLang = $_REQUEST["lang"];
 $browserLang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 $defaultLang = in_array($browserLang, $availableLangs)
