@@ -3,17 +3,17 @@
 <link rel="stylesheet" href="components/welcome/welcome.css">
 
 <h1>
-    <?php echo $translations['title'] ?>
+    <?php echo translate('title') ?>
 </h1>
 <div class="container">
     <?php
     if (count($persons) > 0) {
         echo '<table class="table table-striped">';
         echo '<thead><tr>';
-        echo '<th>' . $translations[$personCols->id] . '</th>';
-        echo '<th>' . $translations[$personCols->name] . '</th>';
-        echo '<th>' . $translations[$personCols->age] . '</th>';
-        echo '<th>' . $translations[$personCols->country] . '</th>';
+        echo '<th>' . translate($personCols->id) . '</th>';
+        echo '<th>' . translate($personCols->name) . '</th>';
+        echo '<th>' . translate($personCols->age) . '</th>';
+        echo '<th>' . translate($personCols->country) . '</th>';
         echo '</tr></thead>';
         echo '<tbody>';
         foreach ($persons as $person) {

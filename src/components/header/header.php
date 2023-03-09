@@ -14,7 +14,7 @@
 		}
 	?>
 	<form action="components/header/lang-select.php" method="POST">
-		<label for="lang"><?php echo $translations['lang_select'] ?>: </label>
+		<label for="lang"><?php echo translate('lang_select') ?>: </label>
 		<select name="lang" id="lang" onchange="this.form.submit()">
 			<?php
 				foreach ($langOptions as $langOption) {

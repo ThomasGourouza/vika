@@ -9,7 +9,7 @@ require_once './i18n/' . $lang . '.php';
 <html>
 <head>
     <meta charset="utf-8">
-    <title><?php echo $translations['site_title'] ?></title>
+    <title><?php echo translate('site_title') ?></title>
     <link rel="icon" href="./favicon.ico">
     <link href="./style.css" rel="stylesheet" type="text/css">
 </head>

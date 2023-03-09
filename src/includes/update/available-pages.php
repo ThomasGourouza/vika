@@ -1,2 +1,2 @@
 <?php
-$availablePages = ["welcome", "contact", "test"];
+$availablePages = ["welcome", "contact"];
