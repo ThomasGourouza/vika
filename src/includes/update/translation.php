@@ -5,7 +5,7 @@ class LangOption {
     public $name;
 }
 
-//############ Languages ############
+//####### Add languages here #######
 
 // French
 $frOption = new LangOption();
@@ -27,9 +27,10 @@ $deOption = new LangOption();
 $deOption->code = 'de';
 $deOption->name = 'Deutsch';
 
-//###################################
-
+// Don't forget to add the new language in this array
 $langOptions = array($frOption, $enOption, $ruOption, $deOption);
+
+//##################################
 
 $availableLangs = [];
 foreach ($langOptions as $langOption) {

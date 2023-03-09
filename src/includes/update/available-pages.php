@@ -1,0 +1,2 @@
+<?php
+$availablePages = ["welcome", "contact"];
