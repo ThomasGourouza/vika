@@ -1,54 +1,31 @@
 <?php include_once './models/person.php' ?>
+<?php include_once './services/person-get-all.php' ?>
 <link rel="stylesheet" href="components/welcome/welcome.css">
 
 <h1>
     <?php echo $translations['title'] ?>
 </h1>
-
 <div class="container">
     <?php
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM `Person`;";
-    $result = $conn->query($sql);
-    $columns = ['id', 'name', 'age', 'country'];
-
-    if ($result->num_rows > 0) {
+    if (count($persons) > 0) {
         echo '<table class="table table-striped">';
         echo '<thead><tr>';
-        foreach ($columns as $column) {
-            echo '<th>' . $translations[$column] . '</th>';
-        }
+        echo '<th>' . $translations[$personCols->id] . '</th>';
+        echo '<th>' . $translations[$personCols->name] . '</th>';
+        echo '<th>' . $translations[$personCols->age] . '</th>';
+        echo '<th>' . $translations[$personCols->country] . '</th>';
         echo '</tr></thead>';
         echo '<tbody>';
-        while ($value = $result->fetch_assoc()) {
-            // console_log($value);
+        foreach ($persons as $person) {
             echo '<tr>';
-            foreach ($value as $element) {
-                
-                console_log($element);
-                // $person = new Person();
-                // $person->id = 'fr';
-                // $person->name = 'Français';
-                // $person->age = 'Français';
-                // $person->country = 'Français';
-
-                // $persons = array($person);
-
-                echo '<td>' . $element . '</td>';
-            }
+            echo '<th>' . $person->id . '</th>';
+            echo '<td>' . $person->name . '</td>';
+            echo '<td>' . $person->age . '</td>';
+            echo '<td>' . $person->country . '</td>';
             echo '</tr>';
         }
         echo '</tbody>';
         echo '</table>';
-        $result->close();
-    } else {
-        echo "0 results";
     }
-
-    $conn->close();
-
     ?>
 </div>
