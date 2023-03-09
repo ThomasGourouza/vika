@@ -3,7 +3,7 @@ require_once './includes.php';
 
 $page = getPage($_REQUEST["page"]);
 $lang = getLang($_REQUEST["lang"]);
-require_once "./i18n/" . $lang . ".php";
+require_once './i18n/' . $lang . '.php';
 ?>
 
 <html>
