@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="components/header/header.css">
+<link rel="stylesheet" href="pages/header/header.css">
 
 <div class="logo" onclick="window.location.href='index.php?page=welcome&lang=<?php echo $lang ?>'"></div>
 <nav>
@@ -9,7 +9,7 @@
 			. ($page==$availablePage ? $activeLink : "") . '>' . translate($availablePage) .'</a>';
 		}
 	?>
-	<form action="components/header/lang-select.php" method="POST">
+	<form action="pages/header/lang-select.php" method="POST">
 		<label for="lang"><?php echo translate('lang_select') ?>: </label>
 		<select name="lang" id="lang" onchange="this.form.submit()">
 			<?php

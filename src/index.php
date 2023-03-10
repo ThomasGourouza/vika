@@ -15,15 +15,12 @@ require_once './i18n/' . $lang . '.php';
 </head>
 <body>
     <header>
-        <?php include "components/header/header.php"; ?>
+        <?php include "pages/header/header.php"; ?>
     </header>
     <main>
         <article>
-        <?php include "components/" . $page . "/" . $page . ".php"; ?>
+        <?php include "pages/" . $page . "/" . $page . ".php"; ?>
         </article>
     </main>
-    <footer>
-        <?php include "components/footer/footer.php"; ?>
-    </footer>
 </body>
 </html>
