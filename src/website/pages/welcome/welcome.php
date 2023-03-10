@@ -1,5 +1,5 @@
 <?php include_once './data/models/person.model.php' ?>
-<?php include_once './data/persons.php' ?>
+<?php include_once './data/person.data.php' ?>
 <link rel="stylesheet" href="website/pages/welcome/welcome.css">
 
 <h1>
@@ -10,10 +10,11 @@
     if (count($persons) > 0) {
         echo '<table class="table table-striped">'
         . '<thead><tr>'
-        . '<th>' . translate($personCols->id) . '</th>'
-        . '<th>' . translate($personCols->name) . '</th>'
-        . '<th>' . translate($personCols->age) . '</th>'
-        . '<th>' . translate($personCols->country) . '</th>'
+        . '<th>' . translate('id') . '</th>'
+        . '<th>' . translate('name') . '</th>'
+        . '<th>' . translate('age') . '</th>'
+        . '<th>' . translate('country') . '</th>'
+        . '<th>' . translate('birthYear') . '</th>'
         . '</tr></thead>'
         . '<tbody>';
         foreach ($persons as $person) {
@@ -22,6 +23,7 @@
             . '<td>' . $person->name . '</td>'
             . '<td>' . $person->age . '</td>'
             . '<td>' . $person->country . '</td>'
+            . '<td>' . $person->getBirthYear() . '</td>'
             . '</tr>';
         }
         echo '</tbody>'
