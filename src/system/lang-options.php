@@ -12,7 +12,7 @@ function addLang($code, $name) {
     array_push($GLOBALS["langOptions"], $langOption);
 }
 
-require_once './includes/config/available-langs.php';
+require_once './config/available-langs.php';
 
 $availableLangs = [];
 foreach ($langOptions as $langOption) {

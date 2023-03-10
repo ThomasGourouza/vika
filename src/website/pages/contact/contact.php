@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="pages/contact/contact.css">
+<link rel="stylesheet" href="website/pages/contact/contact.css">
 
 <h1><?php echo translate('contact') ?></h1>
 

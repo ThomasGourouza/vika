@@ -29,7 +29,7 @@ header nav a:hover {
 
 header .logo {
 	width: 50px;
-	content: url("/pages/header/images/danish.png");
+	content: url("/website/header/images/danish.png");
 	float: left;
 	padding-left: 10px;
 	cursor: pointer;

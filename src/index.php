@@ -1,9 +1,9 @@
 <?php
-require_once './includes.php';
+require_once './system/system.php';
 
 $page = getPage($_REQUEST["page"]);
 $lang = getLang($_REQUEST["lang"]);
-require_once './i18n/' . $lang . '.php';
+require_once './translations/' . $lang . '.php';
 ?>
 
 <html>
@@ -11,15 +11,15 @@ require_once './i18n/' . $lang . '.php';
     <meta charset="utf-8">
     <title><?php echo translate('site_title') ?></title>
     <link rel="icon" href="./favicon.ico">
-    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="./style.global.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
-        <?php include "pages/header/header.php"; ?>
+        <?php include "website/header/header.php"; ?>
     </header>
     <main>
         <article>
-        <?php include "pages/" . $page . "/" . $page . ".php"; ?>
+        <?php include "website/pages/" . $page . "/" . $page . ".php"; ?>
         </article>
     </main>
 </body>

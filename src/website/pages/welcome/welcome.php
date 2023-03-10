@@ -1,6 +1,6 @@
-<?php include_once './models/person.php' ?>
+<?php include_once './data/models/person.model.php' ?>
 <?php include_once './data/persons.php' ?>
-<link rel="stylesheet" href="pages/welcome/welcome.css">
+<link rel="stylesheet" href="website/pages/welcome/welcome.css">
 
 <h1>
     <?php echo translate('title') ?>
