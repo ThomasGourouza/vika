@@ -1,16 +1,12 @@
 <link rel="stylesheet" href="components/header/header.css">
 
-<?php $activeLink = 'class="active-link"'; ?>
-
 <div class="logo" onclick="window.location.href='index.php?page=welcome&lang=<?php echo $lang ?>'"></div>
 <nav>
 	<?php
+		$activeLink = 'class="active-link"';
 		foreach ($availablePages as $availablePage) {
-			echo '
-			<a href="index.php?page=' . $availablePage . '&lang=' . $lang . '" '
-			. ($page==$availablePage ? $activeLink : "") . '>'
-				. translate($availablePage)
-			.'</a>';
+			echo '<a href="index.php?page=' . $availablePage . '&lang=' . $lang . '" '
+			. ($page==$availablePage ? $activeLink : "") . '>' . translate($availablePage) .'</a>';
 		}
 	?>
 	<form action="components/header/lang-select.php" method="POST">
