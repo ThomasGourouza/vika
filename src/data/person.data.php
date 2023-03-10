@@ -1,6 +1,6 @@
 <?php
 
-addPerson(1, 'Bob', 25, 'Bikini Bottom');
-addPerson(2, 'Patrick', 30, 'Bikini Bottom');
-addPerson(3, 'Sandy', 32, 'Bikini Bottom');
-addPerson(4, 'Tom', 31, 'Bikini Bottom');
+addPerson('Bob', yearMonthDay(1992, 11, 17), 'Bikini Bottom');
+addPerson('Bob', yearMonthDay(1992, 1, 17), 'Bikini Bottom');
+addPerson('Bob', yearMonthDay(1992, 2, 17), 'Bikini Bottom');
+addPerson('Patrick', yearMonthDay(2023, 03, 9), 'Bikini Bottom');

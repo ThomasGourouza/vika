@@ -9,4 +9,11 @@ define("TRANSLATIONS", array(
     "name" => "Name",
     "age" => "Alt",
     "country" => "Land",
+    "year" => "Jahr",
+    "years" => "Jahre",
+    "month" => "Monat",
+    "months" => "Monate",
+    "day" => "Tag",
+    "days" => "Tage",
+    "and" => "und",
 ));

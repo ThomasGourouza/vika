@@ -12,18 +12,18 @@
         . '<thead><tr>'
         . '<th>' . translate('id') . '</th>'
         . '<th>' . translate('name') . '</th>'
-        . '<th>' . translate('age') . '</th>'
+        . '<th>' . translate('birthDate') . '</th>'
         . '<th>' . translate('country') . '</th>'
-        . '<th>' . translate('birthYear') . '</th>'
+        . '<th>' . translate('age') . '</th>'
         . '</tr></thead>'
         . '<tbody>';
         foreach ($persons as $person) {
             echo '<tr>'
             . '<th>' . $person->id . '</th>'
             . '<td>' . $person->name . '</td>'
-            . '<td>' . $person->age . '</td>'
+            . '<td>' . localizeDate($person->birthDate) . '</td>'
             . '<td>' . $person->country . '</td>'
-            . '<td>' . $person->getBirthYear() . '</td>'
+            . '<td>' . $person->getAge() . '</td>'
             . '</tr>';
         }
         echo '</tbody>'
