@@ -14,7 +14,8 @@ require_once './translations/' . $lang . '.php';
     <link href="./config/style.config.css" rel="stylesheet" type="text/css">
     <link href="./style.global.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="scrollbar bordered">
+    <div class="force-overflow"></div>
     <header>
         <?php include "website/header/header.php"; ?>
     </header>

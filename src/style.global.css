@@ -27,3 +27,28 @@ article {
 		z-index: 1;
 	}
 } */
+
+.scrollbar {
+    scrollbar-color: var(--scrollbar-color-all);
+}
+.scrollbar::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    background-color: var(--scrollbar-background);
+}
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: var(--scrollbar-shadow);
+    background-color: var(--scrollbar-background);
+    border-radius: var(--scrollbar-border-radius);
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: var(--scrollbar-border-radius);
+    -webkit-box-shadow: var(--scrollbar-shadow);
+    background-color: var(--scrollbar-color);
+}
+.bordered::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    border: var(--scrollbar-border);
+}
+.bordered::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: none;
+}
