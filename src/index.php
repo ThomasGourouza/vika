@@ -11,6 +11,7 @@ require_once './translations/' . $lang . '.php';
     <meta charset="utf-8">
     <title><?php echo translate('site_title') ?></title>
     <link rel="icon" href="./favicon.ico">
+    <link href="./config/style.config.css" rel="stylesheet" type="text/css">
     <link href="./style.global.css" rel="stylesheet" type="text/css">
 </head>
 <body>

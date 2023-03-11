@@ -1,0 +1,11 @@
+:root {
+	/* Colors */
+	--white: rgba(255, 255, 255, 1);
+    --pink: rgba(255, 213, 209, 1);
+    --green: rgba(128, 210, 205, 1);
+	--turquoise: rgba(2, 178, 189, 1);
+    --black: rgba(13, 10, 20, 1);
+	/* sizes */
+	--header-height: 55px;
+	--marge-size: 200px;
+}
