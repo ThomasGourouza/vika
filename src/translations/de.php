@@ -3,6 +3,7 @@ define("TRANSLATIONS", array(
     "site_title" => "Vikas Website",
     "title" => "Wilkommen auf Vikas Website!",
     "welcome" => "Wilkommen",
+    "about-me" => "über mich",
     "contact" => "kontakt",
     "lang_select" => "Suchen sie eine Sprache aus",
     "id" => "Id",

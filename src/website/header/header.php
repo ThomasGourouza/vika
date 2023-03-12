@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="website/header/header.css">
 
 <nav class="row">
-	<div class="col-3"></div>
+	<div class="col-4"></div>
 	<div class="col">
 		<div class="d-flex justify-content-evenly">
 			<?php $activeLink = 'class="active-tab"';

@@ -3,12 +3,13 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	color: var(--white);
+	background-color: var(--background-color);
+	background-image: var(--background-color-gradient);
+	color: var(--text-color);
 }
 
 main {
 	margin-top: var(--header-height);
-	background-color: rgb(151, 196, 255);
 	overflow-x: auto;
 }
 

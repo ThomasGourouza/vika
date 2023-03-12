@@ -3,7 +3,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: var(--green);
+	background-color: var(--header-background);
 	height: var(--header-height);
 }
 
@@ -13,18 +13,14 @@ header {
 
 header nav a {
 	text-decoration: none;
-	color: var(--white);
+	color: var(--tab-color);
+	font-size: large;
 }
 
 header nav a.active-tab {
-	color: var(--pink);
-}
-header nav a:hover {
-	color: var(--pink);
+	color: var(--tab-active);
 }
 
-/* form {
-	position: fixed;
-	top: 0;
-	right: 0;
-} */
+header nav a:hover {
+	color: var(--tab-hover);
+}

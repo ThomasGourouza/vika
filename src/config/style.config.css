@@ -1,13 +1,29 @@
 :root {
 	/* Colors */
-	--white: rgba(255, 255, 255, 1);
-    --pink: rgba(255, 213, 209, 1);
-    --green: rgba(128, 210, 205, 1);
-	--turquoise: rgba(2, 178, 189, 1);
-    --black: rgba(13, 10, 20, 1);
-	--scrollbar-color: rgba(13, 230, 13, 0.5);
-	--scrollbar-background: rgba(0, 0, 0, 0);
-	/* --scrollbar-background: #F5F5F5; */
+	--transparent: rgba(0, 0, 0, 0);
+	--white: rgb(255, 255, 255);
+    --pink: rgb(255, 213, 209);
+    --pink-dark: rgb(248, 186, 180);
+    --green: rgb(128, 210, 205);
+    --green-transparent: rgba(128, 210, 205, 0.5);
+	--green-dark: rgb(28, 138, 130);
+	--turquoise: rgb(2, 178, 189);
+    --black: rgb(13, 10, 20);
+
+	/* Website */
+	--background-color: var(--black);
+	--background-color-gradient: linear-gradient(var(--green-transparent), var(--transparent));
+	--text-color: var(--white);
+	--tab-color: var(--white);
+	--tab-active: var(--pink);
+	--tab-hover: var(--pink-dark);
+	--scrollbar-color: var(--green-dark);
+	--header-background: var(--transparent);
+	--scrollbar-background: var(--transparent);
+
+	/* sizes */
+	--header-height: 55px;
+	--marge-size: 200px;
 
 	/* scrollbar-settings */
 	--scrollbar-width: 12px;
@@ -16,7 +32,4 @@
     --scrollbar-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
     --scrollbar-border: 1px solid var(--scrollbar-color);
 
-	/* sizes */
-	--header-height: 55px;
-	--marge-size: 200px;
 }
