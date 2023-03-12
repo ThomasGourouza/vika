@@ -17,8 +17,8 @@
 	--tab-color: var(--white);
 	--tab-active: var(--pink);
 	--tab-hover: var(--pink-dark);
-	--scrollbar-color: var(--green-dark);
 	--header-background: var(--transparent);
+	--scrollbar-color: var(--green-dark);
 	--scrollbar-background: var(--transparent);
 
 	/* sizes */

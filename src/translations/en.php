@@ -5,7 +5,6 @@ define("TRANSLATIONS", array(
     "welcome" => "Welcome",
     "about-me" => "About me",
     "contact" => "Contact",
-    "lang_select" => "Choose a language",
     "id" => "Id",
     "name" => "Name",
     "age" => "Age",
