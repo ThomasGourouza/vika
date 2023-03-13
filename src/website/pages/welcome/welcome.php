@@ -6,15 +6,11 @@
     <?php echo translate('title') ?>
 </h1>
 <div class="container">
-    <?php
-    if (count($periods) > 0) {
-        foreach ($periods as $period) {
-            echo '<div class="period-block">
-                <div class="period-title">' . localizeDate($period->begin) . ' - ' . localizeDate($period->end) . ' (' . $period->getTime() . ') | ' . $period->title . '</div>
-                <div class="period-info">' . $period->place . '</div>
-                <div class="period-description">' . $period->description . '</div>
-            </div>';
-        }
-    }
-    ?>
+    <?php foreach ($periods as $period) {
+        echo '<div class="period-block">
+            <div class="period-title">' . localizeDate($period->begin) . ' - ' . localizeDate($period->end) . ' (' . $period->getTime() . ') | ' . $period->title . '</div>
+            <div class="period-info">' . $period->place . '</div>
+            <div class="period-description">' . $period->description . '</div>
+        </div>';
+    }?>
 </div>
