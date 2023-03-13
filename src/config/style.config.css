@@ -20,6 +20,10 @@
 	--header-background: var(--transparent);
 	--scrollbar-color: var(--green-dark);
 	--scrollbar-background: var(--transparent);
+	/* period */
+	--period-title-color: var(--white);
+	--period-info-color: var(--white);
+	--period-description-color: var(--white);
 
 	/* sizes */
 	--header-height: 55px;

@@ -1,0 +1,9 @@
+.period-title {
+    color: var(--period-title-color);
+}
+.period-info {
+    color: var(--period-info-color);
+}
+.period-description {
+    color: var(--period-description-color);
+}

@@ -11,16 +11,16 @@ header {
 	padding-top: 15px;
 }
 
-header nav a {
+#tabs a {
 	text-decoration: none;
 	color: var(--tab-color);
 	font-size: large;
 }
 
-header nav a.active-tab {
+#tabs a.active-tab {
 	color: var(--tab-active);
 }
 
-header nav a:hover {
+#tabs a:hover {
 	color: var(--tab-hover);
 }

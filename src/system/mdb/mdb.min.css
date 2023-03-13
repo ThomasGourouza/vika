@@ -415,14 +415,6 @@
   position: absolute
 }
 
-a:not(.sidenav-link):not(.btn):not(.dropdown-item):not(.nav-link):not(.navbar-brand):not(.page-link):not(.carousel-control-prev):not(.carousel-control-next) {
-  color: #8babe0
-}
-
-a:not(.sidenav-link):not(.btn):not(.dropdown-item):not(.nav-link):not(.navbar-brand):not(.page-link):not(.carousel-control-prev):not(.carousel-control-next):hover {
-  color: #779dda
-}
-
 .btn-check:active+.btn-primary,
 .btn-check:checked+.btn-primary,
 .btn-primary.active,
