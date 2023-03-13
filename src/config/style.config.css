@@ -21,9 +21,9 @@
 	--scrollbar-color: var(--green-dark);
 	--scrollbar-background: var(--transparent);
 	/* period */
-	--period-title-color: var(--white);
+	--period-title-color: var(--turquoise);
 	--period-info-color: var(--white);
-	--period-description-color: var(--white);
+	--period-description-color: var(--pink);
 
 	/* sizes */
 	--header-height: 55px;
