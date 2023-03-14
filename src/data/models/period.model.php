@@ -19,41 +19,21 @@ class Period {
 
     public function getTime() {
         $time = $this->end->diff($this->begin);
-        $timeTranslated = '';
-        if ($time->y > 0) {
-            $timeTranslated = $time->y . ' ' . translate($time->y > 1 ? 'years' : 'year');
-            if ($time->m > 0) {
-                if ($time->d > 0) {
-                    $timeTranslated = $timeTranslated . ', '
-                    . $time->m . ' ' . translate($time->m > 1 ? 'months' : 'month') . ' '
-                    . translate('and') . ' '
-                    . $time->d . ' ' . translate($time->d > 1 ? 'days' : 'day');
-                } else {
-                    $timeTranslated = $timeTranslated . ' '
-                    . translate('and') . ' '
-                    . $time->m . ' ' . translate($time->m > 1 ? 'months' : 'month');
-                }
-            } else {
-                if ($time->d > 0) {
-                    $timeTranslated = $timeTranslated . ' '
-                    . translate('and') . ' '
-                    . $time->d . ' ' . translate($time->d > 1 ? 'days' : 'day');
-                }
-            }
-        } else {
-            if ($time->m > 0) {
-                $timeTranslated = $time->m . ' ' . translate($time->m > 1 ? 'months' : 'month');
-                if ($time->d > 0) {
-                    $timeTranslated = $timeTranslated . ' '
-                    . translate('and') . ' '
-                    . $time->d . ' ' . translate($time->d > 1 ? 'days' : 'day');
-                }
-            } else {
-                $timeTranslated = $time->d . ' ' . translate($time->d > 1 ? 'days' : 'day');
+        $timeItems = [[$time->y, 'year'], [$time->m, 'month'], [$time->d, 'day']];
+
+        $yearMonthDaysTranslated = [];
+        foreach ($timeItems as $timeItem) {
+            if ($timeItem[0] > 0) {
+                array_push($yearMonthDaysTranslated, $this->translateTime($timeItem[0], $timeItem[1]));
             }
         }
-        return $timeTranslated;
+        return join(", ", $yearMonthDaysTranslated);
     }
+
+    private function translateTime($value, $unit) {
+        return $value . ' ' . translate($value > 1 ? $unit . 's' : $unit);
+    }
+    
 }
 
 $periods = [];

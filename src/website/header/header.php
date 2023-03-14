@@ -24,21 +24,21 @@ foreach ($langOptions as $langOption) {
 	<div class="col-2 d-flex justify-content-center">
 		<!-- language select -->
 		<div class="dropdown">
-			<a class="dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
+			<a class="custom-dropdown dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
 				<?php echo '<i class="flag ' . $selectedLang->flag . ' m-0"></i>';?>
 			</a>
 			<ul class="dropdown-menu" aria-labelledby="Dropdown">
 				<?php echo '<li>
-					<a class="dropdown-item disabled">'
-					. '<i class="flag ' . $selectedLang->flag . '"></i>'
+					<a class="dropdown-item disabled">
+					<i class="flag ' . $selectedLang->flag . '"></i>'
 					. $selectedLang->name
 					. '</a>
 				</li>
 				<li><hr class="dropdown-divider" /></li>';
 				foreach ($otherLangOptions as $otherLangOption) {
 					echo '<li>
-						<a class="dropdown-item" onclick="selectLang(\'' . $page . '\', \'' . $otherLangOption->code . '\')">'
-						. '<i class="flag ' . $otherLangOption->flag . '"></i>'
+						<a class="dropdown-item" onclick="selectLang(\'' . $page . '\', \'' . $otherLangOption->code . '\')">
+						<i class="flag ' . $otherLangOption->flag . '"></i>'
 						. $otherLangOption->name
 						. '</a>
 					</li>';
