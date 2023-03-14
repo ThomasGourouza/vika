@@ -9,6 +9,8 @@ define("TRANSLATIONS", array(
     "name" => "Имя",
     "age" => "Возраст",
     "country" => "Страна",
+
+    // Time
     "year_1" => "год",
     "year_2-3-4" => "года",
     "year_5+" => "лет",

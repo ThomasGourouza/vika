@@ -9,12 +9,13 @@ define("TRANSLATIONS", array(
     "name" => "Name",
     "age" => "Age",
     "country" => "Country",
+
+    // time
     "year" => "year",
     "years" => "years",
     "month" => "month",
     "months" => "months",
     "day" => "day",
     "days" => "days",
-    "and" => "and",
 ));
     
