@@ -24,7 +24,3 @@ header {
 #tabs a:hover {
 	color: var(--tab-hover);
 }
-
-.custom-dropdown {
-	color: var(--transparent);
-}

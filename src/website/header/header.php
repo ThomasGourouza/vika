@@ -24,7 +24,7 @@ foreach ($langOptions as $langOption) {
 	<div class="col-2 d-flex justify-content-center">
 		<!-- language select -->
 		<div class="dropdown">
-			<a class="custom-dropdown dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
+			<a class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
 				<?php echo '<i class="flag ' . $selectedLang->flag . ' m-0"></i>';?>
 			</a>
 			<ul class="dropdown-menu" aria-labelledby="Dropdown">
