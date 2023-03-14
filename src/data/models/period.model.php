@@ -30,10 +30,34 @@ class Period {
         return join(", ", $yearMonthDaysTranslated);
     }
 
-    private function translateTime($value, $unit) {
-        return $value . ' ' . translate($value > 1 ? $unit . 's' : $unit);
+    private function translateTime($number, $unit) {
+        return $number . ' ' . translate($unit . $this->localiseNumber($number));
     }
-    
+
+    private function localiseNumber($number) {
+        $singPlural = $number > 1 ? 's' : '';
+        return $GLOBALS["lang"] == 'ru' ? $this->russianNumber($number) : $singPlural;
+    }
+
+    private function russianNumber($number) {
+        $numberArray = str_split((string) $number);
+        if ($number == 1
+        || (count($numberArray) > 1
+            && $numberArray[count($numberArray) - 1] == 1
+            && $numberArray[count($numberArray) - 2] != 1)
+        ) {
+            return '_1';
+        }
+        if (in_array($number, [2, 3, 4])
+        || (count($numberArray) > 1
+            && in_array($numberArray[count($numberArray) - 1], [2, 3, 4])
+            && $numberArray[count($numberArray) - 2] != 1)
+        ) {
+            return '_2-3-4';
+        }
+        return '_5+';
+    }
+
 }
 
 $periods = [];

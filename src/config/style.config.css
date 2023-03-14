@@ -20,6 +20,8 @@
 	--header-background: var(--transparent);
 	--scrollbar-color: var(--green-dark);
 	--scrollbar-background: var(--transparent);
+	--lang-select-toggle-color: var(--pink);
+	--lang-select-toggle-hover: var(--pink-dark);
 	/* period */
 	--period-title-color: var(--turquoise);
 	--period-info-color: var(--white);

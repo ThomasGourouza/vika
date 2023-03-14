@@ -24,3 +24,16 @@ header {
 #tabs a:hover {
 	color: var(--tab-hover);
 }
+
+.custom-lang-select {
+	cursor: pointer;
+}
+
+.custom-lang-toggle {
+	color: var(--lang-select-toggle-color);
+	cursor: pointer;
+}
+
+.custom-lang-toggle:hover {
+	color: var(--lang-select-toggle-hover);
+}
